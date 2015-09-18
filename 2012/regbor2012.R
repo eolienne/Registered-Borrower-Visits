@@ -4,13 +4,11 @@
 #configure the environment with appropriate packages
 
 update.packages()
-if("shiny" %in% rownames(installed.packages()) == FALSE) {install.packages("shiny", dependencies = TRUE)}
 if("choroplethr" %in% rownames(installed.packages()) == FALSE) {install.packages("choroplethr", dependencies = TRUE)}
 if("choroplethrMaps" %in% rownames(installed.packages()) == FALSE) {install.packages("choroplethrMaps", dependencies = TRUE)}
 if("data.table" %in% rownames(installed.packages()) == FALSE) {install.packages("data.table", dependencies = TRUE)}
 
 
-library(shiny)
 library(choroplethr)
 library(choroplethrMaps)
 library(data.table)

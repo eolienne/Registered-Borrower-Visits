@@ -31,6 +31,7 @@ for (i in 1:length(filenames)){
   {
     cat("Yes")
 #Create a new column that does Visits per Registered Borrower    
+    temp$regborvisits <- 0
     temp$regborvisits <- temp$VISITS / temp$REGBOR
     temp <- as.data.table(temp)
 #Save only regborvisits and the correlating state to a new data frame     
