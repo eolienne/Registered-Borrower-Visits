@@ -1,12 +1,12 @@
-#Using Ari Lamstein's ui.R as a base
-
 library(shiny)
+library(choroplethr)
 library(choroplethrMaps)
 
-regbor2012 <- read.csv("C:/Users/Alyssa/Box Sync/Programming Projects/IMLS Data/Registered-Borrower-Visits/2012/states2012.csv")
+setwd("C:/Users/Alyssa/Box Sync/Programming Projects/IMLSdata/Registered-Borrower-Visits/Data")
+load("all_data.rdata")
 
-data(regbor2012, package="choroplethr")
-demographic_choices = colnames(df_state_demographics)[2:ncol(df_state_demographics)]
+data(df_all_data, package="choroplethr")
+year_choices = colnames(df_all_data)[2:ncol(df_all_data)]
 
 shinyUI(fluidPage(
   
@@ -15,20 +15,16 @@ shinyUI(fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      selectInput("demographic",
-                  label = "Select demographic",
-                  choices = demographic_choices,
-                  selected = "total_population"),
       selectInput(inputId  = "year", 
                   label    = "Year",
-                  choices  = 2011:2012,
-                  selected = 2012),
+                  choices  = 2007:2013,
+                  selected = 2013),
       
       sliderInput(inputId = "num_colors",
                   label   = "Select number of colors",
                   min     = 1,
                   max     = 9,
-                  value   = 7)),
+                  value   = 1)),
     
     mainPanel(
       plotOutput("stateMap"),
