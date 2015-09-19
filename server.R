@@ -1,5 +1,3 @@
-#Using Ari Lamstein's server-final.R as a base
-
 library(shiny)
 library(choroplethr)
 library(choroplethrMaps)
