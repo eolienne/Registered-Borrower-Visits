@@ -8,7 +8,7 @@ My vision is to eventually create a Shiny application that will allow users to t
 
 Not every year captures "registered borrower" data. It appears to only be 2006-2013. 
 
-###[Here's my .rdata file from this project](https://github.com/eolienne/Registered-Borrower-Visits/tree/master/Data)
+###[Here's my .rdata file from this project](https://github.com/eolienne/Registered-Borrower-Visits/blob/master/Data/all_data.rdata)
 
 ####Currently: 9/18/2015
 Created data frame that has each year of visits per registered borrower. Currently 2006 isn't coming up, although it should. Will look into this later.
