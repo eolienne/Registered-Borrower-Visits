@@ -1,4 +1,7 @@
 #Already downloaded all zip files for csv from this site: http://imls.gov/research-evaluation/data-collection/public-libraries-united-states-survey/public-libraries-united 
+#This script will generate one saved data frame that has the states and the visits per registered borrower for several years.
+
+
 
 update.packages()
 if("shiny" %in% rownames(installed.packages()) == FALSE) {install.packages("shiny", dependencies = TRUE)}
