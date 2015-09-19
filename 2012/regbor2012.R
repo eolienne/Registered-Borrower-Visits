@@ -24,6 +24,10 @@ valuecolnum <- match("VISITS", names(states))
 regioncolnum <- match("STABR", names(states))
 colnames(states)[valuecolnum] <- "value"
 colnames(states)[regioncolnum] <- "region"
+
+states$region = states$STABR
+states$value = states$VISITS
+
 states$region <- tolower(state.name[match(states$region,state.abb)])
 
 #Choroplethr is expecting Washington, DC so I make sure that is included
