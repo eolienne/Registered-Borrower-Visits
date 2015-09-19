@@ -8,7 +8,10 @@ My vision is to eventually create a Shiny application that will allow users to t
 
 Not every year captures "registered borrower" data. It appears to only be 2006-2013. 
 
-####Currently: 9/17/2015
-Need to store newly generated columns in a better way. Current method uses a for loop and thus erases the preceding computation. Maybe lapply could help?
+###[Here's my .rdata file from this project](https://github.com/eolienne/Registered-Borrower-Visits/tree/master/Data)
+
+####Currently: 9/18/2015
+Created data frame that has each year of visits per registered borrower. Currently 2006 isn't coming up, although it should. Will look into this later.
+* 9/17/2015 Need to store newly generated columns in a better way. Current method uses a for loop and thus erases the preceding computation. Maybe lapply could help?
 * 9/16/2015 Started to experiment with Shiny then realized that I want my data structure to be more efficient. Currently developing more programmatic (and reproducible) way to extract data and create a more useable dataset.
 * 9/15/2015: I have created maps for 2012 and 2011. 
