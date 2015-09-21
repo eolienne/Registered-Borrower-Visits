@@ -2,11 +2,11 @@ library(shiny)
 library(choroplethr)
 library(choroplethrMaps)
 
-setwd("C:/Users/Alyssa/Box Sync/Programming Projects/IMLSdata/Registered-Borrower-Visits/Data")
-load("all_data.rdata")
+#Getting data from BOX
+response <- GET(url="https://stanford.box.com/s/uh9k9z5pr32556pmrx5105eucnx20y3s")
+load(rawConnection(response$content))
 
-data(df_all_data, package="choroplethr")
-year_choices = colnames(df_all_data)[2:ncol(df_all_data)]
+data("state.regions", package="choroplethrMaps")
 
 shinyUI(fluidPage(
   
