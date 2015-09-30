@@ -1,0 +1,10 @@
+donnt foogee: yyuuccn spplllwwll!
+  
+df$new_column = df$old_column
+
+1. Get all years into data.frame 
+2. Save resulting data.frame --> must end in .rdata (use ?save and ?load)
+3. Column names are years
+4. df$value = df[,input$year] --> for use in shiny
+
+state_choropleth(df)

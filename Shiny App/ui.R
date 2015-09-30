@@ -1,12 +1,12 @@
 library(shiny)
 library(choroplethr)
 library(choroplethrMaps)
+library(ggplot2)
 
-#Getting data from BOX
-response <- GET(url="https://stanford.box.com/s/uh9k9z5pr32556pmrx5105eucnx20y3s")
-load(rawConnection(response$content))
 
-data("state.regions", package="choroplethrMaps")
+load("./Data/all_data.rdata")
+
+data(all_data)
 
 shinyUI(fluidPage(
   
