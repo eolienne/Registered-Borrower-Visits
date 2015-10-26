@@ -11,7 +11,7 @@ data(all_data)
 shinyUI(fluidPage(
   
   titlePanel("Annual public library registered borrower visits"),
-  div(HTML("By <a href='https://iskati.wordpress.com/'>Alyssa Hislop</a>. Source code <a href='https://github.com/eolienne/Registered-Borrower-Visits'>here</a>.")),
+  div(HTML("By <a href='https://iskati.wordpress.com/'>Alyssa Hislop</a>. Source code <a href='https://github.com/eolienne/Registered-Borrower-Visits'>on GitHub</a>.")),
   
   sidebarLayout(
     sidebarPanel(
