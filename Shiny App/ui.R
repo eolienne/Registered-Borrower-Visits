@@ -6,7 +6,7 @@ library(ggplot2)
 
 load("./Data/all_data.rdata")
 
-data(all_data)
+data("all_data")
 
 shinyUI(fluidPage(
   
@@ -17,7 +17,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput(inputId  = "year", 
                   label    = "Year",
-                  choices  = 2007:2013,
+                  choices  = 2006:2013,
                   selected = 2013),
       
       sliderInput(inputId = "num_colors",
@@ -27,8 +27,8 @@ shinyUI(fluidPage(
                   value   = 1)),
     
     mainPanel(
-      plotOutput("stateMap"),
-      plotOutput("countyMap")
+      plotOutput("stateMap")
+      
     )
   )
 ))
